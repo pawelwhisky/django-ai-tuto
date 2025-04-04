@@ -1,0 +1,71 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+.env/
+
+# Django migrations
+*/migrations/
+*.log
+
+# Django secret key
+*.key
+
+# Database files
+db.sqlite3
+
+# Static files (if not managed by a CDN or during development)
+static/
+
+# Media files (if storing media locally)
+media/
+
+# PyCharm project files
+.idea/
+
+# VSCode project files
+.vscode/
+
+# JetBrains project files
+*.iml
+
+# Distribution / packaging
+*.egg
+*.egg-info
+dist/
+build/
+*.tar.gz
+
+# Python virtual environment on Windows
+venv/
+ENV/
+
+# dotenv environment variable files
+.env
+.env.*
+
+# Django coverage reports
+.coverage
+*.coveragerc
+
+# Pycharm
+.idea/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Test and build folders
+test_*/  # for test folders
+build/
