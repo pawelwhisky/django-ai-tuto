@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Chatbot</title>
+        <style>
+            #chatbox {
+                border: 1px solid #ccc;
+                padding: 10px;
+                width: 300px;
+                height: 400px;
+                overflow-y: auto;
+            }
+            #user-input {
+                width: 250px;
+            }
+            #send-button {
+                padding: 5px 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Simple Chatbot</h1>
+        <div id="chatbox"></div>
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+        <script>
+            document.getElementById('send-button').addEventListener('click', function() {
+                var userInput = document.getElementById('user-input').value;
+                var chatbox = document.getElementById('chatbox');
+
+                // Add user's message to the chatbox
+                chatbox.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+
+                // Fetch the chatbot response
+                fetch(`/simplechat/get_response/?message=${userInput}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        chatbox.innerHTML += "<p><strong>Bot:</strong> " + data.response + "</p>";
+                        document.getElementById('user-input').value = ""; // Clear input field
+                        chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+                    });
+            });
+            document.getElementById('user-input').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Prevent form submission
+                    document.getElementById('send-button').click(); // Trigger the send button click
+                }
+            });
+        </script>
+    </body>
+</html>
