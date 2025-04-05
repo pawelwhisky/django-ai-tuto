@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Include your app here
     'apps.simplechat.apps.SimplechatConfig',
     'apps.chatterbot.apps.ChatterbotConfig',
+    'apps.nltkbot.apps.NltkbotConfig',
 ]
 
 MIDDLEWARE = [

@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('simplechat/', include('apps.simplechat.urls')),
     path('chatterbot/', include('apps.chatterbot.urls')),
+    path('nltkbot/', include('apps.nltkbot.urls')),
 ]
