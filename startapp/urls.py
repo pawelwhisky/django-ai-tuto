@@ -22,4 +22,5 @@ urlpatterns = [
     path('simplechat/', include('apps.simplechat.urls')),
     path('chatterbot/', include('apps.chatterbot.urls')),
     path('nltkbot/', include('apps.nltkbot.urls')),
+    path('scikit_learn/', include('apps.scikit_learn.urls')),
 ]

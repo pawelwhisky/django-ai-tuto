@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.simplechat.apps.SimplechatConfig',
     'apps.chatterbot.apps.ChatterbotConfig',
     'apps.nltkbot.apps.NltkbotConfig',
+    'apps.scikit_learn.apps.ScikitLearnConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scikit-learn Prediction</title>
+</head>
+<body>
+  <h1>Predict with Scikit-learn</h1>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="input_value" placeholder="Enter a number" required>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if prediction is not None %}
+    <h2>Prediction: {{ prediction }}</h2>
+  {% endif %}
+</body>
+</html>
