@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.chatterbot.apps.ChatterbotConfig',
     'apps.nltkbot.apps.NltkbotConfig',
     'apps.scikit_learn.apps.ScikitLearnConfig',
+    'apps.sat_vader.apps.SatVaderConfig',
 ]
 
 MIDDLEWARE = [
